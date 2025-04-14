@@ -18,5 +18,5 @@ with DAG(
              # 연산자가 -로 되어 있기 떄문에 days=1로 해야함. 또 pipe ds를 적용하려면 전체를 괄호로 감싸주어야 함
              'END_DATE' : '{{ (data_interval_end.in_timezone("Asia/Seoul") - macros.dateutil.relativedelta.relativedelta(days=1)) | ds }}'
         },
-        bash_command="echo 'START_DATE: $START_DATE && echo END_DATE: $END_DATE'"
+        bash_command="echo START_DATE: $START_DATE && echo END_DATE: $END_DATE"
     )
