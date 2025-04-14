@@ -44,4 +44,4 @@ with DAG(
         print('status_value:' + str(status_value))
         print('return_value:' + return_value)
 
-    bash_push >> python_pull_xcom()
+    bash_push >> python_pull_xcom
